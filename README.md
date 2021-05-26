@@ -17,6 +17,7 @@ mvn clean compile exec:java -Dexec.mainClass=com.sonatype.exercise.Main
     * DDDDDDDDDD
     * D,DDD,DDD,DDD
 
-## Some Decisions
+## Comments
 * The program is running using CLI, you will need to enter the number you want to convert from number to english text equivalent
-* Unit tests were created in BDD style to help group and interpreting of the tests  
+* Unit tests were created in BDD style to help group and interpreting of the tests
+* Main class with all the logic to convert number to text is [NumberToTextConverter](https://github.com/hectorhuol/sonatype-take-home-excercise/blob/main/src/main/java/com/sonatype/exercise/converter/NumberToTextConverter.java)
