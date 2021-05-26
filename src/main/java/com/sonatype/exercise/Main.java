@@ -1,9 +1,9 @@
 package com.sonatype.exercise;
 
 import com.sonatype.exercise.application.ConsoleApplication;
-import com.sonatype.exercise.converter.OutputFormatter;
 import com.sonatype.exercise.converter.InputValidator;
 import com.sonatype.exercise.converter.NumberToTextConverter;
+import com.sonatype.exercise.converter.OutputFormatter;
 import com.sonatype.exercise.converter.formaters.FirstCapitalizedOutputFormatter;
 import com.sonatype.exercise.converter.validator.StringInputValidator;
 

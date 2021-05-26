@@ -1,6 +1,6 @@
 package com.sonatype.exercise.converter;
 
-public class NumberToTextConverter implements Converter{
+public class NumberToTextConverter {
 
     private static final String [] UNITS =  {
             "zero","one", "two", "three",
@@ -30,16 +30,15 @@ public class NumberToTextConverter implements Converter{
 
     public static final String NEGATIVE = "negative ";
 
-    private OutputFormatter formatter;
+    private final OutputFormatter formatter;
 
-    private InputValidator validator;
+    private final InputValidator validator;
 
     public NumberToTextConverter(OutputFormatter formatter, InputValidator validator){
         this.formatter = formatter;
         this.validator = validator;
     }
 
-    @Override
     public String convert(String inputNumber) {
         int number = validator.getIntValue(inputNumber);
         String text = this.process(number, true);
@@ -71,11 +70,7 @@ public class NumberToTextConverter implements Converter{
             return handleMillions(number);
         }
 
-        if(number >= 1000000000){
-            return handleBillions(number);
-        }
-
-        return "";
+        return handleBillions(number);
     }
 
     private String handleTens(int number) {
